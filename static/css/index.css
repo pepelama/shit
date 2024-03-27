@@ -1,0 +1,463 @@
+.wallpaper {
+  background: url("../img/bg1.png");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 15em;
+  height: 60vh;
+  gap: 5em;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-height: 600px) {
+  .wallpaper {
+    height: 100vh;
+  }
+}
+
+.wallpaper img {
+  position: absolute;
+}
+
+#loopy {
+  width: 30rem;
+  border-radius: 100%;
+}
+
+#kot {
+  width: 12rem;
+  border-radius: 100%;
+}
+
+.page-header-container {
+  background: url("../img/bg2.png");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.page-header {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  font-family: monospace;
+  text-shadow: 3px 6px #000, 0px -1px #000, 0px 1px #000, -1px 0px #000,
+    1px 0px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000;
+  padding-bottom: 1rem;
+}
+
+.cool-yellow {
+  color: #fbff00;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px solid white;
+  font-family: "04b03";
+  z-index: 2;
+}
+
+.first-marquee-text {
+  font-family: "04b03";
+  font-size: 1.6rem;
+  animation: marquee-rtl 30s linear infinite;
+}
+
+.infinite-marq {
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-20% + var(--offset));
+  --move-final: calc(-40% + var(--offset));
+}
+
+.infinite-marq-inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  color: #fbff00;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  font-family: "04b03";
+}
+
+.infinite-marq span {
+  font-size: 2rem;
+  padding: 0 1vw;
+}
+
+.infinite-marq--rtl {
+  animation: infinite-marq-rtl 16s linear infinite;
+}
+
+.infinite-marq--ltr {
+  animation: infinite-marq-ltr 16s linear infinite;
+}
+
+@keyframes infinite-marq-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes infinite-marq-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee {
+  width: 100%;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  margin: 0;
+}
+
+@keyframes marquee-ltr {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.toplogo {
+  position: fixed;
+  z-index: 2;
+  margin: 0;
+  left: 0;
+  top: 0;
+  min-width: 15rem;
+}
+
+.introduction {
+  font-family: "04b03";
+  text-align: center;
+  color: var(--white);
+  padding: 0 3em 0 3em;
+}
+
+.introduction__text {
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.introduction__header {
+  word-wrap: normal;
+  font-size: 1.8rem;
+}
+
+.layer-title {
+  background: url("../img/bg2.png");
+  background-attachment: fixed !important;
+  background-position: bottom;
+  background-size: cover;
+  border-top: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+}
+
+.layer-title p {
+  text-align: center;
+  color: var(--white);
+  font-family: "04b03";
+  font-size: 2.5rem;
+  margin: 0.8em;
+  text-shadow: 3px 6px #000, 0px -1px #000, 0px 1px #000, -1px 0px #000,
+    1px 0px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000;
+  margin: 0;
+}
+
+.diary-entry {
+  padding: 0.75em;
+  background-attachment: fixed !important;
+}
+
+.diary-entry img {
+   
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 40rem;
+}
+
+.diary-entry p {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid var(--black);
+  text-align: left;
+  color: var(--white);
+  text-align: left;
+  font-family: monospace;
+  font-size: 1.6rem;
+  padding: 1em;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.diary-entry a {
+  color: yellow;
+}
+
+.diary-entry a:hover {
+  color: aqua;
+}
+
+.diary-entry--2023 {
+  background: url("../img/bg1.png");
+  background-size: cover;
+}
+
+.diary-entry--2022 {
+  background: url("../img/gloom.webp");
+  background-size: cover;
+}
+
+.diary-entry--2021 {
+  background: url("../img/gratitude.webp");
+  background-size: cover;
+}
+
+.diary-entry--2020 {
+  background: url("../img/start.webp");
+  background-size: cover;
+}
+
+.diary-entry--2017 {
+  background: url("../img/bg1.png");
+  background-size: cover;
+}
+
+.diary-entry--2017 h2 {
+  text-align: center;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  color: var(--yellow);
+  font-size: 4rem;
+}
+
+.diary-entry--2020 p,
+.diary-entry--2017 h2,
+.diary-entry--2017 p {
+  font-family: monospace;
+}
+
+.layer-title--lain-house {
+  background: url("../img/bg2.png");
+  background-size: cover;
+  font-family: "04b03";
+}
+
+.watch-lain {
+  padding: 2.5em;
+  font-family: monospace;
+  text-align: center;
+  border-bottom: 2px solid var(--white);
+}
+
+.watch-lain img {
+  width: 50%;
+  max-width: 60rem;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--white);
+}
+
+.watch-lain a {
+  color: var(--lime);
+  font-size: 2rem;
+}
+
+.watch-lain a:hover {
+  color: var(--yellow);
+}
+
+.mr {
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.watch-lain2 {
+  margin-top: 25px;
+  margin-right: 5px;
+  padding: 2.5em;
+  font-family: monospace;
+  text-align: center;
+  border-bottom: 2px solid var(--white);
+}
+
+.watch-lain2 img {
+  width: 50%;
+  max-width: 60rem;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--white);
+}
+
+.watch-lain2 a {
+  color: var(--lime);
+  font-size: 2rem;
+}
+
+.watch-lain2 a:hover {
+  color: var(--yellow);
+}
+
+
+.qna {
+  padding-left: 5em;
+  padding-right: 5em;
+  font-family: monospace;
+}
+
+.qna__header {
+  color: var(--yellow);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.qna__question {
+  color: var(--lime);
+  text-shadow: 1px 1px 2px;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.qna__answer {
+  color: var(--white);
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-header {
+    font-size: 6rem;
+  }
+
+  .introduction__header {
+    font-size: 4rem;
+  }
+
+  .introduction__text {
+    font-size: 2.3rem;
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+
+  .second-marquee-text {
+    font-size: 4rem;
+  }
+
+  #loopy {
+    width: 40rem;
+  }
+
+  #kot {
+    width: 15rem;
+  }
+
+  .layer-title p {
+    font-size: 6rem;
+  }
+
+  .diary-entry p {
+    padding: 2em;
+    font-size: 2.3rem;
+  }
+
+  .diary-entry {
+    padding-top: 3em;
+    padding-left: 16em;
+    padding-right: 16em;
+    padding-bottom: 3em;
+  }
+
+  .watch-lain a {
+    font-size: 10rem;
+  }
+
+  .qna {
+    padding-left: 15em;
+    padding-right: 15em;
+  }
+
+  .qna__header {
+    color: var(--yellow);
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .qna__question {
+    color: var(--lime);
+    text-shadow: 1px 1px 2px;
+    font-size: 3.4rem;
+    
+    margin: 0;
+  }
+
+  .qna__answer {
+    color: var(--white);
+    font-size: 4.2rem;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+/* 
+  Since IOS Safari doesn't support my favorite CSS feature (background-attachment: fixed)
+  we have to look for ways to not make the website look as horrible on it.
+  NOTE for future self: there are some hacky ways to work around this but i am not sure
+  how much i care at the moment.
+ */
+@supports (-webkit-touch-callout: none) {
+  .wallpaper {
+    background-attachment: scroll;
+  }
+
+  .page-header-container {
+    background-attachment: scroll;
+  }
+
+  .diary-entry--2023,
+  .diary-entry--2022,
+  .diary-entry--2021,
+  .diary-entry--2020,
+  .diary-entry--2017,
+  .layer-title {
+    background-size: initial;
+  }
+}
